@@ -2,14 +2,12 @@
 #
 # pure GAP implementation of permutation functions
 #
-# Permutations are stored as plain list of 
+# Permutations are stored as plain list
 
-
-# Constructor for Permutations
-DeclareGlobalFunction("PermutationCons");
-
-DeclareRepresentation( "IsPermPlistRep", IsPerm and IsPositionalObjectRep, [] );
-BindGlobal( "PermPlistType", NewType(PermutationsFamily, IsPerm and IsPermPlistRep));
+InstallGlobalFunction(PermutationConsNC,
+                     function(img)
+                         return Objectify(PermPlistType, [ img ]);
+                     end);
 
 InstallGlobalFunction(PermutationCons,
     function(img)

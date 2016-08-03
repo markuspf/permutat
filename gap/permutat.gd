@@ -3,7 +3,10 @@
 #
 # Declarations
 #
+# DeclareConstructor with filter?
+DeclareGlobalFunction("PermutationCons");
+DeclareGlobalFunction("PermutationConsNC");
 
-#! @Description
-#!   Insert documentation for you function here
-DeclareGlobalFunction( "permutat_Example" );
+DeclareRepresentation( "IsPermPlistRep", IsPerm and IsPositionalObjectRep, [] );
+BindGlobal( "PermPlistType",
+            NewType(PermutationsFamily, IsPerm and IsPermPlistRep));
