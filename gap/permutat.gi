@@ -159,4 +159,12 @@ InstallMethod(
         return Lcm(cyclens);
     end);
 
+InstallMethod(
+    ViewString,
+    "for a permutation in plist rep",
+    [ IsPerm and IsPermListRep ],
+    function(p)
+        return "<permutation in plist representation>";
+    end);
+
 #BindGlobal("IdentityPerm", )
